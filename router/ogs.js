@@ -3,7 +3,6 @@ const ogs = require("open-graph-scraper");
 const router = express.Router();
 
 router.get("/preview", async (req, res) => {
-  console.log("Link preview called with URL:", req.query.url);
   try {
     const { url } = req.query;
     const { result } = await ogs({ url });
